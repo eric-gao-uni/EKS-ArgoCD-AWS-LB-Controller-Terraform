@@ -51,8 +51,8 @@ Before you begin, ensure you have the following installed:
    ```bash
    terraform init
    terraform validate
-   terraform plan -var-file=variables.tfvars
-   terraform apply -auto-approve -var-file=variables.tfvars
+   terraform plan -var-file=variables.tfvars -lock=false
+   terraform apply -auto-approve -var-file=variables.tfvars -lock=false
 
 4. **Access Deployed Resources: Use kubectl to interact with your EKS cluster and the deployed tools (ArgoCD, Prometheus, Grafana, etc.).**
 
